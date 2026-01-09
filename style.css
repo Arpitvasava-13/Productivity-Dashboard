@@ -1,0 +1,111 @@
+:root {
+  --pri: #fcdec0;
+  --sec: #7d5a50;
+  --tri: #e5b299;
+  --tri2: #b4846c;
+}
+
+@font-face {
+  font-family: light;
+  src: url(./fonnts.com-4556/fonts/fonnts.com-Aeonik-Regular.ttf);
+}
+
+@font-face {
+  font-family: bold;
+  src: url(./fonnts.com-4556/fonts/fonnts.com-Aeonik-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: light;
+  color: rgb(51, 255, 140);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: var(--sec);
+}
+
+section.allElems {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  padding-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  position: absolute;
+}
+
+.elem {
+  background-color: rgb(85, 26, 26);
+  height: 400px;
+  width: 330px;
+  font-size: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all ease o.3s;
+  cursor: pointer;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.elem h2 {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-weight: 500;
+  font-size: 33px;
+}
+
+.elem:active {
+  scale: 0.97;
+}
+
+.fullElem {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(85, 26, 26);
+  padding: 40px;
+  font-size: 60px;
+  display: none;
+  position: absolute;
+}
+
+.back {
+  position: absolute;
+  right: 5%;
+  background-color: red;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.back:active {
+  scale: 0.97;
+}
