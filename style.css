@@ -1,8 +1,12 @@
 :root {
-  --pri: #fcdec0;
-  --sec: #7d5a50;
-  --tri: #e5b299;
-  --tri2: #b4846c;
+  --pri: #f8f4e1;
+  --sec: #381c0a;
+  --tri1: #feba17;
+  --tri2: #74512d;
+  --red: red;
+  --green: rgb(9, 138, 89);
+  --blue: rgb(0, 191, 255);
+  --black: black;
 }
 
 @font-face {
@@ -20,7 +24,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: light;
-  color: rgb(51, 255, 140);
+  color: var(--pri);
 }
 
 html,
@@ -88,9 +92,8 @@ section.allElems {
 .fullElem {
   height: 100%;
   width: 100%;
-  background-color: rgb(85, 26, 26);
+  background-color: var(--sec);
   padding: 40px;
-  font-size: 60px;
   display: none;
   position: absolute;
 }
@@ -100,12 +103,163 @@ section.allElems {
   right: 5%;
   background-color: red;
   border-radius: 10px;
-  padding: 10px 15px;
+  padding: 15px 20px;
   border: none;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .back:active {
   scale: 0.97;
+}
+
+.todo-fullpage h2 {
+  font-size: 65px;
+}
+.todo-fullpage .todo-container {
+  height: 80%;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-fullpage .todo-container .addTask {
+  width: 33%;
+  background: var(--tri2);
+  height: 100%;
+  border-radius: 20px;
+}
+
+.todo-fullpage .todo-container .allTask {
+  width: 65%;
+  background: var(--tri2);
+  height: 100%;
+  border-radius: 20px;
+}
+
+.todo-fullpage .todo-container .addTask form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.todo-container .addTask form input#task-input {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 25px;
+  background-color: var(--pri);
+  color: var(--tri2);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.todo-container .addTask form textarea {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 25px;
+  background-color: var(--pri);
+  color: var(--tri2);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.todo-container .addTask form button {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 25px;
+  background-color: var(--tri1);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  font-weight: 700;
+  transition: all ease 0.3s;
+}
+
+.todo-container .addTask form button:active {
+  scale: 0.95;
+}
+
+.todo-fullpage .todo-container .allTask {
+  width: 65%;
+  background: var(--tri2);
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  overflow: auto;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--pri);
+  padding: 20px 30px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.task h5 {
+  color: var(--tri2);
+  font-size: 30px;
+  display: flex;
+}
+
+.task h5 span {
+  background-color: var(--red);
+  color: var(--pri);
+  padding: 4px 6px;
+  border-radius: 50px;
+  font-size: 11px;
+}
+
+.task button {
+  padding: 15px 30px;
+  color: var();
+  background-color: green;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+}
+
+.task button:active {
+  scale: 0.95;
+}
+
+.mark-imp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  gap: 30px;
+}
+
+.mark-imp input {
+  scale: 1.7;
+}
+
+.mark-imp label {
+  font-size: 20px;
+}
+
+.task h5 {
+  color: var(--tri2);
+  font-size: 30px;
 }
